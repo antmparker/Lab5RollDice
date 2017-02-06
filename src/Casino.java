@@ -9,38 +9,35 @@ public class Casino {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Welcome to the Grand Circus Casino! ");
+
         System.out.println();
 
-        roll();
-
-    }
-
-    public static int roll() {
-
-        Scanner scan = new Scanner(System.in);
-        String answer = "y";
+        String answer = "";
         int numRoll = 0;
-        while (answer.equals("y")) {
+        do {
             numRoll++;
             System.out.print("How many sides should each die have? ");
-            System.out.println("\nPress 'Enter' to roll dice==> ");
             int sides = scan.nextInt();
 
-            int n = (int) (Math.random() * sides + 1);
-            int n2 = (int) (Math.random() * sides + 1);
+            System.out.println("\nEnter '1' to roll dice==> ");
+            scan.next();
 
             System.out.println("\nRoll " + numRoll);
-            System.out.println(n);
-            System.out.println(n2);
-            System.out.println();
-            System.out.print("Continue? (y/n) ");
+            System.out.println(roll(sides));
+            System.out.println(roll(sides));
+            System.out.println("Roll again? (y/n? ");
             answer = scan.next();
-
         }
-
-        return 1;
+        while (answer.equals("y"));
     }
 
+    public static int roll(int sides) {
+
+        int n = (int) (Math.random() * sides + 1);
+
+        return sides;
+    }
 
 }
+
 
