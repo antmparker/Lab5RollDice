@@ -29,7 +29,7 @@ public class Casino {
             int n = (int) (Math.random() * sides + 1);
             int n2 = (int) (Math.random() * sides + 1);
 
-            System.out.println("Roll " + numRoll );
+            System.out.println("\nRoll " + numRoll);
             System.out.println(n);
             System.out.println(n2);
             System.out.println();
@@ -38,7 +38,7 @@ public class Casino {
 
         }
 
-        return 1 ;
+        return 1;
     }
 
 
