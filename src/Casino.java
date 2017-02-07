@@ -35,7 +35,7 @@ public class Casino {
 
         int n = (int) (Math.random() * sides + 1);
 
-        return sides;
+        return n;
     }
 
 }
